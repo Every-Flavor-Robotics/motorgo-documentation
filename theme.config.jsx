@@ -14,5 +14,13 @@ export default {
     ),
     project: {
         link: 'https://github.com/shuding/nextra'
+    },
+    color: {
+        hue: 6,
+        saturation: 100,
+        lightness: {
+            dark: 80,
+            light: 80
+        }
     }
 }
