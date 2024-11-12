@@ -1,0 +1,51 @@
+import { Cards } from 'nextra/components'
+import Image from 'next/image'
+
+# MotorGo Plink
+
+<Image src="assets/plink.png" alt="MotorGo Plink 1" width={500} height={500} />
+
+## Features
+* ESP32-S3 with Wifi and BT connectivity
+* Form factor of a PiHat (we do not currently have the EEPROM requirements of the PiHat Spec)
+* DC barrel jack and on-board buck from 6-17V into 5.1V up to 6A (enough to power pi4 and pi5)
+* 9 dof IMU (LSM6DSOTR-C accel and gyro + LIS3MDLTR mag)
+* USB-C programming compatible with arduino IDE
+* Qwiic port x2 for easy integration with sensors
+* Full gpio breakout on 40Pin header + full RPi GPIO passthrough if using as a hat
+* 4 bidirectional DC motor channels up to 2A each channel
+* 4 Encoder ports for use with EncoderGo 5pin jst for close loop feedback on each motor
+
+## Setup
+The MotorGo Plink 1 can be used as a standalone motor controller or as a PiHat. In standalone mode, the onboard ESP32-S3 can be programmed using PlatformIO or the Arduino IDE. In PiHat mode, the MotorGo Plink 1 can be used with any Raspberry Pi with a 40 pin header. There is a Python API that can be used to control the MotorGo Plink 1 as a PiHat.
+
+## PiHat
+<Cards>
+  <Cards.Card
+    title="Quickstart"
+    href="/motorgo_plink_1/setup/pihat/quickstart"
+    arrow
+  />
+  <Cards.Card
+    title="Details"
+    href="/motorgo_plink_1/setup/pihat"
+    arrow
+  />
+
+</Cards>
+
+## Standalone
+<Cards>
+
+  <Cards.Card
+    title="Quickstart"
+    href="/motorgo_plink_1/setup/standalone/quickstart"
+    arrow
+  />
+  <Cards.Card
+    title="Details"
+    href="/motorgo_plink_1/setup/standalone"
+    arrow
+  />
+
+</Cards>

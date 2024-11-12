@@ -1,4 +1,4 @@
 export default {
     index: 'Introduction',
-    'motorgo-plink-1': 'Plink 1',
+    motorgo_plink_1: 'Plink 1'
 }

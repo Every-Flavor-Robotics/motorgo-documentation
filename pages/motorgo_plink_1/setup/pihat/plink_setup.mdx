@@ -1,0 +1,42 @@
+# Configure the Plink for PiHat mode
+
+To operate as a PiHat, the Plink must be flashed with the PiHat firmware. The Pi can do this automatically through the `motorgo` command line tool, which is a part of the `motorgo` Python package.
+
+## Connecting the Plink to the Pi
+
+To connect the Plink to the Pi, use the 40-pin header on the Pi.
+
+* 11 mm standoffs
+* gif of connecting the Plink to the Pi or maybe a diagram
+
+## Installing the motorgo python package
+
+The `motorgo` package is available on PyPi and can be installed with pip.
+
+```bash filename="bash"
+pip install motorgo
+```
+
+### Manual Installation
+
+If you would like to install the package manually, you can clone the repository and install it with pip.
+
+```bash filename="bash"
+git clone
+cd motorgo
+pip install .
+```
+
+## Flashing the PiHat firmware
+
+Installing the PiHat firmware is as simple as running the following command:
+
+```bash filename="bash"
+motorgo flash
+```
+
+This will automatically pull the correct version of the firmware and flash it to the Plink via the GPIO pins.
+
+
+## Custom Firmware
+The PiHat firmware is open source and can be modified to suit your needs. The firmware is available on GitHub and can be found [here](/broken-link). The firmware is written in Arduino and can be flashed using either PlatformIO or the Arduino IDE. Follow the [standalone setup](/motorgo_plink_1/standalone) to configure your development environment.

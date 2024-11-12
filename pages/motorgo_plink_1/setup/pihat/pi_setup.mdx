@@ -1,0 +1,60 @@
+import { Steps } from 'nextra/components'
+import { Cards } from 'nextra/components'
+
+# Raspberry Pi Setup
+
+The Plink Python API supports any Debian-based Linux distribution for the Pi (Ubuntu, Raspbian, Debian, etc). However, for ease of use, we recommend using the **MotorGo Raspberry Pi image**. This image is based on Ubuntu 24.04 and is configured out of the box to work with the Plink 1.
+
+Features:
+* WiFi configuration portal
+* VNC server for remote desktop control
+
+
+If you already have a Raspberry Pi set up, you can skip this step and go directly to the [next step](/motorgo_plink_1/pihat/pi_setup).
+
+## MotorGo Raspberry Pi Image Installation
+
+### Installing the MotorGo Raspberry Pi Image
+
+<Steps>
+#### Download the MotorGo Raspberry Pi Image Setup
+
+The image is available for download [here](/broken_link). Once downloaded, unzip the file.
+
+#### Install the Raspberry Pi Imager on your computer
+
+The Raspberry Pi Imager is available for download [here](https://www.raspberrypi.org/software/).
+
+#### Flash the image to an SD card
+* Insert the SD card into your computer
+* Open the Raspberry Pi Imager
+* Select your Pi model in the `Choose Device` menu
+* Select `Custom` in the `Choose OS` menu and choose the MotorGo image
+* Choose your SD card in the `Choose SD Card` menu
+* Click `Write` and wait for the process to complete
+</Steps>
+
+### Connecting the Pi to your network
+Once you power up the Raspberry Pi with the MotorGo image, you will need to connect the Pi to your network. There are two ways to do this:
+
+1. **Ethernet**: Connect the Pi to your router with an Ethernet cable. Go to your router's admin page to find the IP address of the Pi.
+
+2.  **WiFi**: When not connected to the network, the Pi will create a WiFi network called `motorgo-pi-XXXX`. Connect to this network and go to `http://setup.motorgo.local` in your browser to configure the WiFi settings.
+
+
+
+### Connecting to the Raspberry Pi
+
+Once the Pi is connected, you can access it via SSH or VNC. The default username is `motorgo` and the default password is `motorgo`.
+
+#### SSH
+* Open a terminal on your computer
+* Run `ssh motorgo@<ip_address>` where `<ip_address>` is the IP address of the Pi
+
+#### VNC
+* Download a VNC client on your computer
+* Open the VNC client and enter the IP address of the Pi
+* Enter the username and password when prompted
+
+
+The Raspberry Pi is now set up and ready to use with the MotorGo Plink 1, continue to the next step to setup the Plink 1 as a PiHat.
