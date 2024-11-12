@@ -13,7 +13,7 @@ export default {
         </>
     ),
     project: {
-        link: 'https://github.com/shuding/nextra'
+        link: 'https://github.com/Every-Flavor-Robotics/motorgo-mini-driver.git'
     },
     color: {
         hue: 6,
@@ -22,5 +22,8 @@ export default {
             dark: 80,
             light: 80
         }
-    }
+    },
+    chat: {
+        link: 'https://discord.gg/exDWKb4kwd',
+    },
 }

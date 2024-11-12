@@ -1,6 +1,21 @@
+
 export default {
-    index: 'Welcome to MotorGo',
-    motorgo_plink_1: 'Plink 1',
-    motorgo_mini_1: 'Mini 1',
-    motorgo_core_1: 'Core 1',
+    index:
+    {
+        title: 'Home',
+        type: 'page',
+        display: 'hidden'
+    },
+    docs:
+    {
+        title: 'Documentation',
+        type: 'page',
+        layout: 'full',
+        timestamp: false,
+    },
+    projects:
+    {
+        title: 'Projects',
+        type: 'page',
+    },
 }
