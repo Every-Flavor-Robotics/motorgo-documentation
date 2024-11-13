@@ -1,0 +1,121 @@
+import { Steps } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+import { Callout } from 'nextra/components'
+
+# Quickstart: MotorGo in Standalone Mode
+
+<Callout type="info" emoji="🤖">
+    Applies to Plink 1, Mini 1, Core 1
+</Callout>
+
+<Tabs items={['Arduino', 'PlatformIO']}>
+  <Tabs.Tab>
+    <Steps>
+### Install ESP32 Board Definitions
+All MotorGo boards are included in the ESP32 board definitions
+
+* Go to `Tools > Board > Boards Manager...`
+* Search for `ESP32`
+* Install `esp32` by Espressif Systems
+
+<Cards.Card
+    title="More Details"
+    href="/docs/standalone_mode/board_setup"
+    arrow
+  />
+
+### Install the MotorGo Library:
+
+* Click on the library manager on the left toolbar or go to `Sketch > Include Library > Manage Libraries...`
+* Search for `MotorGo_Mini_Driver` and press install
+
+<Cards.Card
+    title="More Details"
+    href="/docs/standalone_mode/library_setup"
+    arrow
+  />
+
+### Run the example code
+
+* Go to `File > Examples > MotorGo Mini Driver > read_encoders` (under Examples from Custom Libaries)
+* Select MotorGo board: `Select Board > Select Other Board and Port > MotorGo Mini 1`.
+* Click the upload button (right arrow) to upload the sketch to the board
+
+<Cards.Card
+    title="More Details"
+    href="/motorgo_plink_1/setup/pihat/example_code"
+    arrow
+  />
+
+</Steps>
+
+  </Tabs.Tab>
+  <Tabs.Tab>
+    All of the configuration for PlatformIO can be completed in the `platfomio.ini` for your project. If you are creating a new project, select the appropriate motorgo board from the boards list.
+
+    <Steps>
+### Update platform
+The MotorGo library relies on the latest version of the Arduino-ESP32 library, which is not supported in the official espressif32 platform. Instead, we recommend using the pioarduino fork which can be configured as follows.
+```ini filename="platformio.ini"
+platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
+```
+### Select board
+Modify your `platformio.ini` file to use the appropriate MotorGo board:
+```ini filename="platformio.ini"
+; MotorGo Plink 1
+board = motorgo_plink_1
+
+; Motorgo Mini 1
+board = motorgo_mini_1
+
+; MotorGo Core 1
+board = motorgo_core_1
+```
+
+<Cards.Card
+    title="More Details"
+    href="/docs/standalone_mode/board_setup"
+    arrow
+  />
+
+### Include the MotorGo library:
+Update `lib_deps` to include the motorgo library
+```ini filename="platformio.ini"
+lib_deps =
+    https://github.com/Every-Flavor-Robotics/motorgo-mini-driver.git#main
+    ; Your other project dependencies...
+```
+<Callout type="info" emoji="ℹ">
+    You can include different versions of the library by modifying the version tag (#dev, #v1.0.1, etc.)
+</Callout>
+
+
+### Run the example code
+
+How do we recommend running example code? I need to remember how to find it. Maybe, we can skip all of this and jump directly to that step?
+<Cards.Card
+    title="More Details"
+    href="/motorgo_plink_1/setup/pihat/example_code"
+    arrow
+  />
+
+</Steps>
+
+Below is a complete `platformio.ini` file, configured with a few more recommended settings.
+```ini filename="platformio.ini"
+[env:motorgo]
+platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
+board = motorgo_mini_1
+framework = arduino
+monitor_speed = 115200
+lib_ldf_mode = deep
+lib_deps =
+    https://github.com/Every-Flavor-Robotics/motorgo-mini-driver.git#dev
+    ; Your other project dependencies...
+```
+
+
+  </Tabs.Tab>
+</Tabs>
+
