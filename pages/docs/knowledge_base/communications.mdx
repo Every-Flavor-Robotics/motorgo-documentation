@@ -1,1 +1,51 @@
-# Comms
+# Communication 📡
+
+## Big ideas  
+
+*Robots need a way to “speak” and “listen” to other devices or systems. This includes Bluetooth and WiFi, as well as protocols like UART, I2C, and SPI. Fast, reliable communication helps all parts work together smoothly.*
+
+If communication seems confusing at first, take a deep breath! All of these tools are designed to be simple once you get the hang of them. Move slowly, use Google/YouTube/GPT, and don't stress. Most of the tricky details are handled by software libraries you just need to import and use. 
+
+### Cheat sheet 
+Here's a quick guide to get your "thingies" talking to each other. Remember, these are all **protocols.**
+
+*A **protocol** is a set of rules so everyone knows how to send messages, read them, and respond.*
+
+#### MotorGo uses these protocols:
+
+| Protocol | Description | Wired/Wireless |
+|-----------|-----------------|-----------|
+| **Wi-Fi** | high speed, long distance communication | wireless |
+| **Bluetooth** | low-power, short-range communcation | wireless |
+| **UART** | simple, one-to-one communcation | wired | 
+| **SPI** | fast leader-follower communication where speed matters | wired |
+| **I2C** | simple multi-device communication with fewer wires |  wired |
+
+#### Other popular protocols:
+
+|Protocol | Description | Wired/Wireless |
+|---------|----------|------------|
+| **CAN Bus** | reliable, noise-resistant (used in cars and factories) | wired |
+| **LoRa** | ultra-long-distance, low power communication for IoT | wireless |
+| **Ethernet** | high speed, reliable, long-distance communication | wired |
+| **Modbus** | widely used for data exchange in industrial systems | wired |
+| **EtherCAT** | real-time control for robotics, automation, and CNCs | wired |
+
+### Why MotorGo uses simpler protocols
+
+MotorGo focuses on accessible and beginner-friendly robotics. By using simple, widely supported protocols like SPI and I2C, we make it easy for you to start projects quickly. As your projects grow, you can explore more complex protocols like Ethernet, Modbus, or EtherCAT for industrial applications.
+
+## How MotorGo uses communication   
+
+MotorGo products use a range of communication protocols to make your projects fit together seamlessly. This table details how each protocol is used in its default setup. 
+
+### Product Table 
+
+| MotorGo Board | Wi-Fi | Bluetooth | UART | SPI | I2C | 
+| -- | -- | -- | -- | -- | -- |
+| MotorGo Plink | PID GUI | no default uses | no default uses | program over USB, encoders | Qwiic sensor bus |
+| MotorGo Plink (as PiHat) | disabled (Pi handles Wi-Fi) | no default uses | no default  | leader-follower with Pi, encoders | Qwiic sensor bus | 
+| MotorGo Axis | PID GUI | no default uses | no default uses | program over USB, encoders | Qwiic sensor bus|
+| MotorGo Axis (as PiHat) | PID GUI | no default uses | no default uses | leader-follower with Pi, encoders | Qwiic sensor bus|
+|EncoderGo| N/A | N/A | not used | 5 wire SPI for encoder data | not used |
+
