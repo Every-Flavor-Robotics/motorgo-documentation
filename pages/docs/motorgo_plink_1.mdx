@@ -3,34 +3,24 @@ import Image from 'next/image'
 import { TwoColumns, Column } from '/components/TwoColumns.tsx'
 
 
-# MotorGo Plink
+# MotorGo Plink 1
+<Image src="../assets/plink_welcome.gif" alt="MotorGo Plink 1" width={400} height={400} />
 
-<Image src="../assets/plink.png" alt="MotorGo Plink 1" width={500} height={500} />
 
-* Replace this picutre with a gif of plink on a robot running
 
-## Features
+## Board Overview
 
-* Replace this with a pinout diagram with the core information about what the different things on the pins do
-* ESP32-S3 with Wifi and BT connectivity
-* Form factor of a PiHat (we do not currently have the EEPROM requirements of the PiHat Spec)
-* DC barrel jack and on-board buck from 6-17V into 5.1V up to 6A (enough to power pi4 and pi5)
-* 9 dof IMU (LSM6DSOTR-C accel and optional gyro + LIS3MDLTR mag)
-* USB-C programming compatible with arduino IDE
-* Qwiic port x2 for easy integration with sensors
-* Full gpio breakout on 40Pin header + full RPi GPIO passthrough if using as a hat
-* 4 bidirectional DC motor channels up to 2A each channel
-* 4 Encoder ports for use with EncoderGo 5pin jst for close loop feedback on each motor
+
+<Image src="../assets/plink_pin_diagram.png" alt="MotorGo Plink 1" width={600} height={600} />
+
+* Add a brief description of the board
+    * Power input
+    * Motor outputs
+    * Qwiic
+    * PiHat
 
 ## Setup
-The MotorGo Plink can be used as a standalone motor controller or as a PiHat. In standalone mode, the onboard ESP32-S3 is programmable via PlatformIO or the Arduino IDE. You can program the standalone Plink in the Arduino Programming Language.
-
-In PiHat mode, the MotorGo Plink can be attached to any Raspberry Pi with a 40 pin header. You can use our Python API to command the MotorGo Plink from your Raspberry Pi, upgrading an already powerful computer into an affordable full-feature robotics platform.
-
-
-**Should we rename standalone mode?**
-
-perhaps Arduino mode vs PiHat mode?
+The MotorGo Plink 1 can operate as a standalone device or as a PiHat.
 
 <TwoColumns>
 
@@ -38,6 +28,11 @@ perhaps Arduino mode vs PiHat mode?
 
 
 ## Standalone
+
+* Program with the Arduino Programming Language
+* Use the onboard ESP32 to control motors and sensors
+* **Recommended for most users**
+
 <Cards>
 
   <Cards.Card
@@ -58,6 +53,9 @@ perhaps Arduino mode vs PiHat mode?
 <Column>
 
 ## PiHat
+* Program with a Python API on the Raspberry Pi
+* Make use of the Raspberry Pi's processing power, while offloading motor control to the MotorGo Plink 1
+* **Recommended for advanced robotics projects**
 <Cards>
   <Cards.Card
     title="Quickstart"
@@ -75,3 +73,17 @@ perhaps Arduino mode vs PiHat mode?
 </Column>
 
 </TwoColumns>
+
+
+## Detailed Specifications
+
+* Replace this with a pinout diagram with the core information about what the different things on the pins do
+* ESP32-S3 with Wifi and BT connectivity
+* Form factor of a PiHat (we do not currently have the EEPROM requirements of the PiHat Spec)
+* DC barrel jack and on-board buck from 6-17V into 5.1V up to 6A (enough to power pi4 and pi5)
+* 9 dof IMU (LSM6DSOTR-C accel and optional gyro + LIS3MDLTR mag)
+* USB-C programming compatible with arduino IDE
+* Qwiic port x2 for easy integration with sensors
+* Full gpio breakout on 40Pin header + full RPi GPIO passthrough if using as a hat
+* 4 bidirectional DC motor channels up to 2A each channel
+* 4 Encoder ports for use with EncoderGo 5pin jst for close loop feedback on each motor
