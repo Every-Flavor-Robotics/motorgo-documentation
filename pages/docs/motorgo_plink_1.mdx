@@ -1,5 +1,7 @@
 import { Cards } from 'nextra/components'
 import Image from 'next/image'
+import { TwoColumns, Column } from '/components/TwoColumns.tsx'
+
 
 # MotorGo Plink
 
@@ -21,28 +23,19 @@ import Image from 'next/image'
 * 4 Encoder ports for use with EncoderGo 5pin jst for close loop feedback on each motor
 
 ## Setup
-* Create a split panel:
-    * Left side: Standalone
-    * Right side: PiHat
-    *
 The MotorGo Plink can be used as a standalone motor controller or as a PiHat. In standalone mode, the onboard ESP32-S3 is programmable via PlatformIO or the Arduino IDE. You can program the standalone Plink in the Arduino Programming Language.
 
 In PiHat mode, the MotorGo Plink can be attached to any Raspberry Pi with a 40 pin header. You can use our Python API to command the MotorGo Plink from your Raspberry Pi, upgrading an already powerful computer into an affordable full-feature robotics platform.
 
-## PiHat
-<Cards>
-  <Cards.Card
-    title="Quickstart"
-    href="/docs/pihat_mode/quickstart"
-    arrow
-  />
-  <Cards.Card
-    title="Details"
-    href="/docs/pihat_mode"
-    arrow
-  />
 
-</Cards>
+**Should we rename standalone mode?**
+
+perhaps Arduino mode vs PiHat mode?
+
+<TwoColumns>
+
+<Column>
+
 
 ## Standalone
 <Cards>
@@ -59,3 +52,26 @@ In PiHat mode, the MotorGo Plink can be attached to any Raspberry Pi with a 40 p
   />
 
 </Cards>
+
+</Column>
+
+<Column>
+
+## PiHat
+<Cards>
+  <Cards.Card
+    title="Quickstart"
+    href="/docs/pihat_mode/quickstart"
+    arrow
+  />
+  <Cards.Card
+    title="Details"
+    href="/docs/pihat_mode"
+    arrow
+  />
+
+</Cards>
+
+</Column>
+
+</TwoColumns>
