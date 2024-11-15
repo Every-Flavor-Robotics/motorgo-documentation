@@ -1,6 +1,8 @@
 import { Cards } from 'nextra/components'
 import Image from 'next/image'
 import { TwoColumns, Column } from '/components/TwoColumns.tsx'
+import { Callout } from 'nextra/components'
+
 
 
 # MotorGo Plink 1
@@ -31,7 +33,32 @@ The MotorGo Plink 1 can operate as a standalone device or as a PiHat.
 
 * Program with the Arduino Programming Language
 * Use the onboard ESP32 to control motors and sensors
-* **Recommended for most users**
+
+
+<Callout type="info" >
+    Recommended for most users
+</Callout>
+
+</Column>
+
+<Column>
+
+## PiHat
+* Program with a Python API on the Raspberry Pi
+* Make use of the Raspberry Pi's processing power, while offloading motor control to the MotorGo Plink 1
+
+
+<Callout type="info" >
+    Recommended for users who need tools like ROS or OpenCV
+</Callout>
+
+</Column>
+
+</TwoColumns>
+
+<TwoColumns>
+
+<Column>
 
 <Cards>
 
@@ -52,10 +79,6 @@ The MotorGo Plink 1 can operate as a standalone device or as a PiHat.
 
 <Column>
 
-## PiHat
-* Program with a Python API on the Raspberry Pi
-* Make use of the Raspberry Pi's processing power, while offloading motor control to the MotorGo Plink 1
-* **Recommended for advanced robotics projects**
 <Cards>
   <Cards.Card
     title="Quickstart"
