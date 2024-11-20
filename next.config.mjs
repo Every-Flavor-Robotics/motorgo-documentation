@@ -8,8 +8,8 @@ const withNextra = nextra({
 export default withNextra(
     {
         output: 'export',
-        basePath: '/motorgo-documentation',
-        assetPrefix: '/motorgo-documentation/',
+        basePath: '',
+        assetPrefix: '',
         images: {
             unoptimized: true,
         },
