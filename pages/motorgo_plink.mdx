@@ -6,20 +6,50 @@ import { Callout } from 'nextra/components'
 
 
 # MotorGo Plink 1
+<TwoColumns>
+
+<Column>
 <Image src="../assets/plink_welcome.gif" alt="MotorGo Plink 1" width={400} height={400} />
 
+</Column>
+
+<Column>
+<Image src="../assets/plink.png" alt="MotorGo Plink 1" width={300} height={300} />
 
 
-## Board Overview
+</Column>
+
+</TwoColumns>
 
 
-<Image src="../assets/plink_pin_diagram.png" alt="MotorGo Plink 1" width={600} height={600} />
 
-* Add a brief description of the board
-    * Power input
-    * Motor outputs
-    * Qwiic
-    * PiHat
+## Plink Overview
+
+### Board Layout
+
+<Image src="../assets/plink_layout.png" alt="MotorGo Plink 1" width={600} height={600} />
+
+Key Features:
+* 6-15V barrel jack. Make sure to use a center-positive connector. Center-negative will fry the device!
+* 4x DC motor drivers. 1.5A per channel
+* 4x Encoder ports. Plug and play with EncoderGo
+* 2x Qwiic ports. 4 pin I2C sensors
+* Reset and boot buttons. Use these to reset robot or use Plink in programming mode.
+* GPIO header. See pin diagram below.
+* USB-C port. Program Plink over USB-C connection.
+
+To learn more about Plink hardware, check out our [Github](https://github.com/Every-Flavor-Robotics/motorgo-plink-hardware).
+
+<Cards.Card
+    title="Detailed Tech Specs"
+    href="/docs/standalone_mode/quickstart"
+    arrow
+  />
+
+### Pin Diagram
+
+<Image src="../assets/plink_pin_diagram.png" alt="Plink Pin Diagram" width={600} height={600} />
+
 
 ## Setup
 The MotorGo Plink 1 can operate as a standalone device or as a PiHat.
@@ -30,6 +60,10 @@ The MotorGo Plink 1 can operate as a standalone device or as a PiHat.
 
 
 ## Standalone
+
+<Image src="../assets/plink_rover.jpg" alt="MotorGo Plink 1" width={600} height={600} />
+
+
 
 * Program with the Arduino Programming Language
 * Use the onboard ESP32 to control motors and sensors
@@ -44,12 +78,16 @@ The MotorGo Plink 1 can operate as a standalone device or as a PiHat.
 <Column>
 
 ## PiHat
-* Program with a Python API on the Raspberry Pi
+
+<Image src="../assets/plink_rover.jpg" alt="MotorGo Plink 1" width={600} height={600} />
+
+* Program with Python API on the Raspberry Pi
 * Make use of the Raspberry Pi's processing power, while offloading motor control to the MotorGo Plink 1
 
 
 <Callout type="info" >
-    Recommended for users who need tools like ROS or OpenCV
+    Recommended for advanced robotics projects
+
 </Callout>
 
 </Column>
