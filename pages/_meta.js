@@ -1,21 +1,23 @@
-
 export default {
-    index:
-    {
+    index: {
         title: 'Home',
-        type: 'page',
         display: 'hidden'
     },
-    docs:
-    {
-        title: 'Documentation',
-        type: 'page',
-        layout: 'full',
-        timestamp: false,
+
+    hardware_separator: {
+        type: 'separator',
+        title: "Motor Controllers"
     },
-    projects:
-    {
-        title: 'Projects',
-        type: 'page',
+
+    motorgo_plink_1: 'Plink',
+    motorgo_core_1: 'Axis',
+
+    get_going_separator: {
+        type: 'separator',
+        title: "Get Going"
     },
+
+    standalone_mode: "Standalone Mode",
+    pihat_mode: "PiHat Mode"
+
 }
