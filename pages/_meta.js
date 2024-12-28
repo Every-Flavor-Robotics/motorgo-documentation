@@ -9,8 +9,8 @@ export default {
         title: "Motor Controllers"
     },
 
-    motorgo_plink_1: 'Plink',
-    motorgo_core_1: 'Axis',
+    motorgo_plink: 'Plink',
+    motorgo_axis: 'Axis',
 
     get_going_separator: {
         type: 'separator',
