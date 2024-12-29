@@ -2,7 +2,41 @@ import { Cards } from 'nextra/components'
 import Image from 'next/image'
 import { TwoColumns, Column } from '/components/TwoColumns.tsx'
 import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
 
 
 
-# MotorGo Axis
+# EncoderGo
+
+## Key Features
+
+* **14-bit Resolution** - The MT6701 magnetic encoder provides 16384 counts per revolution.
+* **SPI Interface** - Communicate with the encoder over SPI, with the 5-pin EncoderGo JST connector.
+
+## Magnetic Encoders
+
+Magnetic encoders work differently from optical encoders:
+
+- **Detection Method**: They use the rotation of a magnet to detect position instead of a light source and photodetector.
+- **Advantages**: More compact and offer higher resolution compared to optical encoders.
+
+## Setting Up EncoderGo
+
+<Steps>
+
+### Attach the Magnet
+   Attach a **diametrically magnetized magnet** to the motor shaft or any rotating part you want to measure. We have a 3D-printable magnet holder available on our [Printables page](https://www.printables.com/@MotorGoLLC_1533058).
+
+### Mount the Encoder
+   - Place the encoder as close to the magnet as possible.
+   - Ensure the magnet is **centered on the encoder IC** located in the middle of the EncoderGo board.
+   - 3D-printable encoder mounts are available on our [Printables page](https://www.printables.com/@MotorGoLLC_1533058).
+
+### Connect the Encoder
+    Connect the EncoderGo to your MotorGo board using the 5-pin JST connector. You should see the encoder LED light up when the MotorGo is powered on.
+</Steps>
+
+## EncoderGo Connector Pinout
+
+The EncoderGo port exposes the encoder SPI interface and power pins. You can break out the pins to a custom connector or use the EncoderGo cable to connect to the MotorGo board.
+
