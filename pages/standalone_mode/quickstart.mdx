@@ -4,24 +4,47 @@ import { Tabs } from 'nextra/components'
 import { Callout } from 'nextra/components'
 
 
-# Standalone Mode Quickstart: Spin a Motor
-
-## On your robot
-
-Before you start:
-* Barrel jack power
-* MotorGo Plink
-* Motor
-* Encoder
-
-
-## Before you start:
-
-* Add a "Before you start" section, with pre-requisites
+# Standalone Quickstart: Spin a Motor
 
 <Callout type="info" emoji="🤖">
-    Applies to Plink 1, Core 1
+    Applies to Plink, Core
 </Callout>
+
+This guide will walk you through the process of spinning a motor using the MotorGo driver in standalone mode.
+
+{/* Callout */}
+<Callout type="info" emoji="❗️">
+    Applies to Plink, Core
+</Callout>
+
+
+## On Your Robot:
+
+{/* Steps */}
+<Steps>
+
+### Gather the hardware
+* MotorGo board
+* Motor - Brushed DC (Plink) or Brushless (Core)
+* EncoderGo (optional for Plink)
+* A power supply with a barrel jack (Plink) or XT30 connector (Core)
+* USB-C cable1
+
+### Connect the Motor and Encoder
+If you're using a Plink, you do not need to connect an encoder to spin the motor.
+
+### Power up the MotorGo
+Connect the MotorGo to your computer using a USB-C cable. The MotorGo will power up and be ready to program.
+
+</Steps>
+
+## On Your Computer:
+
+You'll need to install either the Arduino IDE or PlatformIO to program the MotorGo board.
+* [Arduino IDE](https://www.arduino.cc/en/software)
+* [PlatformIO](https://platformio.org/)
+
+Once installed, follow the instructions below to install the MotorGo library and run the example code.
 
 <Tabs items={['Arduino', 'PlatformIO']}>
   <Tabs.Tab>
@@ -35,25 +58,25 @@ All MotorGo boards are included in the ESP32 board definitions
 
 <Cards.Card
     title="More Details"
-    href="/docs/standalone_mode/board_setup"
+    href="/standalone_mode/board_setup"
     arrow
   />
 
 ### Install the MotorGo Library:
 
 * Click on the library manager on the left toolbar or go to `Sketch > Include Library > Manage Libraries...`
-* Search for `MotorGo_Mini_Driver` and press install
+* Search for `MotorGo_Mini_Driver` (Axis) or `MotorGo_Plink_Driver` (Plink) and press install
 
 <Cards.Card
     title="More Details"
-    href="/docs/standalone_mode/library_setup"
+    href="/standalone_mode/library_setup"
     arrow
   />
 
 ### Run the example code
 
 * Go to `File > Examples > MotorGo Mini Driver > read_encoders` (under Examples from Custom Libaries)
-* Select MotorGo board: `Select Board > Select Other Board and Port > MotorGo Mini 1`.
+* Select MotorGo board: `Select Board > Select Other Board and Port > MotorGo [Plink or Axis]`.
 * Click the upload button (right arrow) to upload the sketch to the board
 
 <Cards.Card

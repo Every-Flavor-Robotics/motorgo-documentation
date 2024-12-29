@@ -1,34 +1,166 @@
 import { Cards } from 'nextra/components'
 import Image from 'next/image'
 import { TwoColumns, Column } from '/components/TwoColumns.tsx'
+import { Callout } from 'nextra/components'
+
 
 
 # MotorGo Axis
 
-<Image src="../assets/axis_welcome.gif" alt="Welcome to axis" width={600} height={600} />
+
+## Key Features
+
+- **6–15V Barrel Jack** – ⚠️ Center-positive!
+- **2x Brushless Motor Drivers** – Supports up to **10A per channel**, designed for **SimpleFOC**.
+- **2x Encoder Ports** – Plug-and-play compatibility with **EncoderGo**.
+- **9-DOF IMU** – **LSM6DSO** accelerometer and **LIS3MDL** magnetometer.
+- **2x Qwiic Ports** – **4-pin I2C connectors** for sensors and peripherals.
+- **GPIO Header** – Refer to the **pin diagram below** for details.
+- **USB-C Port** – Program Plink over a **USB-C connection**.
 
 
-** Insert gif of project working here **
+{/* <Cards.Card
+    title="Detailed Tech Specs"
+    href="/docs/standalone_mode/quickstart"
+    arrow
+  /> */}
 
-## Board Overview
+For additional details about the Axis hardware, visit our [GitHub Repository](https://github.com/Every-Flavor-Robotics/motorgo-axis-hardware).
 
-** Insert annotated image of MotorGo Axis here **
 
-### Key Features:
-* 6-17v input voltage
-* 2 brushless motor channels, up to 10A per motor
-* Qwiic sensor integration
-* Magnetic encoder integration - convert any BLDC motor to a DC servo
+
+
+## Board Layout
+<br />
+
+
+<div style={{ textAlign: 'center' }}>
+  <img
+    src="../assets/plink_layout.png"
+    alt="MotorGo Axis"
+    width="870"
+    height="716"
+  />
+</div>
+
+
+
+## Pin Diagram
+<br />
+
+<Image src="../assets/plink_pin_diagram.png" alt="Plink Pin Diagram" width={1720} height={946} />
 
 
 ## Setup
+The MotorGo Axis supports two modes to fit your project needs. In Standalone Mode, it acts as the main controller, requiring no additional compute hardware. In PiHat Mode, it offloads motor control to the Plink while a Raspberry Pi handles the rest of the high-level processing to provide more flexibility.
 
-**Standalone** and **PiHat**
+<TwoColumns>
 
-## Detailed Specs
-Check out our Knowledge Base for a full technical writeup on the MotorGo Axis.
+<Column>
 
-## Featured Projects:
+
+### Standalone
+
+<Image src="../assets/plink_rover.jpg" alt="MotorGo Axis" width={600} height={600} />
+
+
+
+* Program with the Arduino Programming Language
+* Use the onboard ESP32 to control motors and sensors
+
+
+<Callout type="info" >
+    Recommended for most users
+</Callout>
+
+</Column>
+
+<Column>
+
+### PiHat
+
+
+<Image src="../assets/plink_rover.jpg" alt="MotorGo Axis" width={600} height={600} />
+
+* Program with Python API on the Raspberry Pi
+* Make use of the Raspberry Pi's processing power, while offloading motor control to the MotorGo Axis
+
+
+<Callout type="info" >
+    Recommended for advanced robotics projects
+
+</Callout>
+
+</Column>
+
+</TwoColumns>
+
+<TwoColumns>
+
+<Column>
+
+<Cards>
+
+  <Cards.Card
+    title="Quickstart"
+    href="/docs/standalone_mode/quickstart"
+    arrow
+  />
+  <Cards.Card
+    title="Details"
+    href="/docs/standalone_mode"
+    arrow
+  />
+
+</Cards>
+
+</Column>
+
+<Column>
+
+<Cards>
+  <Cards.Card
+    title="Quickstart"
+    href="/docs/pihat_mode/quickstart"
+    arrow
+  />
+  <Cards.Card
+    title="Details"
+    href="/docs/pihat_mode"
+    arrow
+  />
+
+</Cards>
+
+</Column>
+
+</TwoColumns>
+
+
+{/* ## Detailed Specifications */}
+
+
+{/*
+This section, for the most part, is taken care of
+
+Definitely need to add the following:
+
+*/}
+
+{/* * Replace this with a pinout diagram with the core information about what the different things on the pins do
+* ESP32-S3 with Wifi and BT connectivity
+* Form factor of a PiHat (we do not currently have the EEPROM requirements of the PiHat Spec)
+* DC barrel jack and on-board buck from 6-17V into 5.1V up to 6A (enough to power pi4 and pi5)
+* 9 dof IMU (LSM6DSOTR-C accel and optional gyro + LIS3MDLTR mag)
+* USB-C programming compatible with arduino IDE
+* Qwiic port x2 for easy integration with sensors
+* Full gpio breakout on 40Pin header + full RPi GPIO passthrough if using as a hat
+* 4 bidirectional DC motor channels up to 2A each channel
+* 4 Encoder ports for use with EncoderGo 5pin jst for close loop feedback on each motor */}
+
+## Featured Projects
+
+<br />
 
 <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", maxWidth: "100%", background: "#000" }}>
   <iframe
@@ -46,5 +178,3 @@ Check out our Knowledge Base for a full technical writeup on the MotorGo Axis.
     }}
   />
 </div>
-
-Etch a Sketch robot v1

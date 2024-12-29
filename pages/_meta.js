@@ -6,18 +6,28 @@ export default {
 
     hardware_separator: {
         type: 'separator',
-        title: "Motor Controllers"
+        title: "Hardware Guides"
     },
 
     motorgo_plink: 'Plink',
     motorgo_axis: 'Axis',
+    encodergo: 'EncoderGo',
 
     get_going_separator: {
         type: 'separator',
-        title: "Get Going"
+        title: "Getting Started"
     },
 
     standalone_mode: "Standalone Mode",
-    pihat_mode: "PiHat Mode"
+    pihat_mode: "PiHat Mode",
+
+    knowledge_base_separator: {
+        type: 'separator',
+        title: "Knowledge Base"
+    },
+
+    knowledge_building_blocks: "Robotics Building Blocks",
+
+
 
 }

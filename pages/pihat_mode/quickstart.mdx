@@ -4,11 +4,18 @@ import { Callout } from 'nextra/components'
 
 # Quickstart: MotorGo in PiHat Mode
 
+
+<Callout type="warning" emoji="⚠️">
+    MotorGo PiHat support is in beta. This guide reflects the setup process for release, but will not work with the current software. Please check back soon for updates.
+</Callout>
+
 <Callout type="info" emoji="🤖">
-    Applies to Plink 1, Core 1
+    Applies to Plink, Axis
 </Callout>
 
 <Steps>
+
+
 ### Install the MotorGo Raspberry Pi disk image
 
 * [Download the disk image](/broken_link)
@@ -28,7 +35,7 @@ pip install motorgo
 motorgo flash
 ```
 
-
+<br />
 <Cards.Card
     title="More Details"
     href="/docs/pihat_mode/motorgo_setup"
@@ -47,6 +54,8 @@ motorgo spin_motors
 ```bash filename="bash"
 motorgo read_imu
 ```
+
+<br />
 
 <Cards.Card
     title="More Details"
