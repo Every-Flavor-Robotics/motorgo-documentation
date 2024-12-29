@@ -27,7 +27,7 @@ export default {
     },
 
     knowledge_building_blocks: "Robotics Building Blocks",
-
-
-
+    __knowledge_building_blocks: {
+        display: 'hidden'
+    },
 }
