@@ -2,3 +2,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .hero-callout--primary-border {
+        @apply border-t-4;
+        border-top-color: theme('colors.primary.800');
+    }
+
+    :root.dark .hero-callout--primary-border {
+        border-top-color: theme('colors.primary.600');
+    }
+
+    .hero-subtitle {
+        margin-bottom: 0;
+        color: theme('colors.primary.800');
+    }
+
+    :root.dark .hero-subtitle {
+        color: theme('colors.primary.600');
+    }
+}
