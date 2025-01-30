@@ -30,4 +30,12 @@ export default {
     __knowledge_building_blocks: {
         display: 'hidden'
     },
+
+    api_reference_separate: {
+        type: 'separator',
+        title: "API Reference"
+    },
+
+    python_api_reference: "Python",
+
 }
