@@ -40,7 +40,8 @@ const ClassDoc: React.FC<ClassDocProps> = ({
     examples,
 }) => {
     return (
-        <div className={cn('_flex _flex-col _gap-6 _ms-4')}>
+        <div dir="ltr" className={cn('_flex _flex-col _gap-4 _ml-2 _mb-2')}>
+
             {/* Title */}
             <h1 className="_text-3xl _font-bold">{title}</h1>
 
@@ -49,9 +50,9 @@ const ClassDoc: React.FC<ClassDocProps> = ({
 
             {/* Attributes */}
             {attributes.length > 0 && (
-                <div className="_flex _flex-col _gap-4">
+                <div className="_flex _flex-col _gap-2">
                     <h2 className="_text-xl _font-semibold">Attributes</h2>
-                    <div className="_ps-4 _space-y-3">
+                    <div className="_ps-4 _space-y-3 _ms-4">
                         {attributes.map((attr, index) => (
                             <div key={index}>
                                 <span className="_font-medium">{attr.name}</span>{' '}
@@ -67,7 +68,7 @@ const ClassDoc: React.FC<ClassDocProps> = ({
             {examples && examples.length > 0 && (
                 <div className="_flex _flex-col _gap-4">
                     <h2 className="_text-xl _font-semibold">Examples</h2>
-                    <div className="_ps-4 _space-y-3">
+                    <div className="_ps-4 _space-y-3 _ms-4">
                         {examples.map((example, index) => (
                             <Code
                                 key={index}

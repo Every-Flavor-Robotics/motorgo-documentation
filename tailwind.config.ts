@@ -5,7 +5,8 @@ export default {
         './content/**/*.{md,mdx}',
 
         // Or if using `src` directory:
-        './components/**/*.{js,jsx,ts,tsx,md,mdx}'
+        './pages/**/*.{js,jsx,ts,tsx,md,mdx}',
+        './components/*.{js,jsx,ts,tsx,md,mdx}'
 
     ],
     theme: {
@@ -13,4 +14,3 @@ export default {
     },
     plugins: []
 }
-

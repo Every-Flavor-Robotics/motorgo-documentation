@@ -42,14 +42,14 @@ const APIDoc: React.FC<APIDocProps> = ({
     examples
 }) => {
     return (
-        <div className={cn('_flex _flex-col _gap-6 _ms-4')}>
+        <div className={cn('_flex _flex-col _gap-4 _ml-2 _mb-2')}>
             {/* Title */}
             <h1 className="_text-3xl _font-bold">{title}</h1>
 
             {/* Signature */}
             <Code
                 data-language="python"
-                className="_rounded-md _p-4 _overflow-auto"
+                className="_rounded-md _p-4 _overflow-auto _"
             >
                 {signature}
             </Code>
@@ -59,9 +59,9 @@ const APIDoc: React.FC<APIDocProps> = ({
 
             {/* Parameters */}
             {parameters.length > 0 && (
-                <div className="_flex _flex-col _gap-4">
+                <div className="_flex _flex-col">
                     <h2 className="_text-xl _font-semibold">Parameters</h2>
-                    <div className="_ps-4 _space-y-3">
+                    <div className="_ps-4 _space-y-3 _ms-4">
                         {parameters.map((param, index) => (
                             <div key={index}>
                                 <span className="_font-medium">{param.name}</span>{' '}
@@ -77,7 +77,7 @@ const APIDoc: React.FC<APIDocProps> = ({
             {keywordArguments.length > 0 && (
                 <div className="_flex _flex-col _gap-4">
                     <h2 className="_text-xl _font-semibold">Keyword Arguments</h2>
-                    <div className="_ps-4 _space-y-3">
+                    <div className="_ps-4 _space-y-3  _ms-4">
                         {keywordArguments.map((kwarg, index) => (
                             <div key={index}>
                                 <span className="_font-medium">{kwarg.name}</span>{' '}
