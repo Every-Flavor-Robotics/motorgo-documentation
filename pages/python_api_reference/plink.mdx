@@ -1,7 +1,7 @@
 import PythonFunctionDoc from "/components/PythonFunctionDoc.tsx";
 import PythonClassDoc from "/components/PythonClassDoc.tsx";
 
-
+# Plink API Reference
 
 <PythonClassDoc
     title="Plink"
@@ -48,8 +48,8 @@ import PythonClassDoc from "/components/PythonClassDoc.tsx";
     parameters={[
     ]}
     keywordArguments={[
-        { name: 'frequency', type: '(int, Optional)', description: 'Communication frequency with the Plink. The update frequency tends to become unstable past 200 Hz.', default: '200' },
-        { name: 'timeout', type: '(float, Optional)', description: 'Communication timeout (seconds). If no data is received beyond this time, the Plink is reset.', default: '1.0' }
+        { name: 'frequency', type: 'int', description: 'Communication frequency with the Plink. The update frequency tends to become unstable past 200 Hz.', default: '200' },
+        { name: 'timeout', type: 'float', description: 'Communication timeout (seconds). If no data is received beyond this time, the Plink is reset.', default: '1.0' }
     ]}
 
 />
