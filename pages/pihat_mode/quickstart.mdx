@@ -2,7 +2,7 @@ import { Steps } from 'nextra/components'
 import { Cards } from 'nextra/components'
 import { Callout } from 'nextra/components'
 
-# Quickstart: MotorGo in PiHat Mode
+# PiHat Quickstart: Spin a Motor
 
 
 <Callout type="warning" emoji="⚠️">
@@ -13,20 +13,49 @@ import { Callout } from 'nextra/components'
     Applies to Plink, Axis
 </Callout>
 
+
+This guide will walk you through the process of spinning a motor using the MotorGo driver in PiHat mode.
+
+
+## On Your Robot:
+
+{/* Steps */}
 <Steps>
+
+### Gather the hardware
+* Raspberry Pi
+* MicroSD Card for the Raspberry Pi
+* Motor - Brushed (Plink) or Brushless (Axis)
+* EncoderGo (optional for Plink)
+* A power supply with a barrel jack (Plink) or XT30 connector (Axis)
+
+### Connect the MotorGo to the Raspberry Pi
+Attach the MotorGo to the Raspberry Pi 40 pin header. Use standoffs that are at least 11 mm tall to prevent the MotorGo from contacting the Raspberry Pi. If you are using a Raspberry Pi with a heatsink, you may need longer standoffs.
+
+### Connect the Motor and Encoder to the MotorGo
+If you're using a Plink, you do not need to connect an encoder to spin the motor.
+
+
+</Steps>
+
+<Steps>
+
 
 
 ### Setup the Raspberry Pi
 
-* Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to image a microSD card
+* Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to image the microSD card
     * Use the latest Raspberry Pi OS (64-bit)
     * Configure WiFi and SSH before writing the disk image
+
+* Insert the microSD card into the Raspberry Pi and power everything on by connecting the power supply to the MotorGo.
 
 <Cards.Card
     title="More Details"
     href="/pihat_mode/pi_setup"
     arrow
   />
+
 
 ### Enable communication interfaces on the Raspberry Pi
 
