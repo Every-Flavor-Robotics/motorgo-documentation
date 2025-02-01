@@ -97,7 +97,7 @@ All MotorGo boards are included in the ESP32 board definitions.
 ### Update platform
 The MotorGo library relies on the latest version of the Arduino-ESP32 library, which is not supported in the official espressif32 platform. Instead, we recommend using the pioarduino fork which can be configured as follows.
 ```ini filename="platformio.ini"
-platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
+platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
 ```
 ### Select board
 Modify your `platformio.ini` file to use the appropriate MotorGo board:
@@ -144,7 +144,7 @@ How do we recommend running example code? I need to remember how to find it. May
 Below is a complete `platformio.ini` file, configured with a few more recommended settings.
 ```ini filename="platformio.ini"
 [env:motorgo]
-platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
+platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
 board = motorgo_mini_1
 framework = arduino
 monitor_speed = 115200
