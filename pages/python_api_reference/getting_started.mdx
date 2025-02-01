@@ -1,0 +1,49 @@
+import { Callout } from 'nextra/components'
+
+
+# Getting Started
+
+<Callout type="info" emoji="🤖">
+    Applies to Plink, Axis
+</Callout>
+
+To start using the MotorGo Python API, first import your MotorGo board from the `motorgo` module:
+
+```python filename="python"
+from motorgo import Plink
+```
+
+Next, create an instance of the board you imported:
+
+```python filename="python"
+plink = Plink()
+```
+
+Optionally, you can configure the communication parameter for the board:
+
+```python filename="python"
+plink = Plink(frequency = 200, timeout = 1.0)
+```
+
+Frequency defines the frequency of data transmission to the MotorGo board. Reducing the frequency results in less CPU usage on the MotorGo and Pi. The frequency may not be stable above 200 Hz. Timeout defines the time in seconds to wait for a response from the MotorGo board before attempting to reset communications.
+
+
+Before you can start controlling the Plink, you must configure the power supply voltage of the board. This allows the Plink to accurately limit the motor voltages.
+
+```python filename="python"
+plink.power_supply_voltage = 12.0
+```
+
+To begin communication, run the following command:
+```python filename="python"
+plink.connect()
+```
+
+This will check that the MotorGo firmware is correct and that the correct MotorGo is connected. Once these are verified, you can start reading encoder data, controlling the motors, and reading the IMU data.
+
+If the MotorGo firmware version is incorrect, you can update the firmware by running the following command in your command line:
+
+```python filename="python"
+motorgo flash
+```
+

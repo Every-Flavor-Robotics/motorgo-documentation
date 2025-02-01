@@ -1,0 +1,33 @@
+
+# Reading Encoder Data
+
+The encoder data can be accessed from the `MotorChannel` objects in the `Plink` object. The `MotorChannel` objects are accessible as:
+
+```python filename="python"
+plink.channel1
+plink.channel2
+plink.channel3
+plink.channel4
+```
+
+You can save a reference to the `MotorChannel` objects as local variables for convenience. For example:
+
+```python filename="python"
+left_drive_wheel = plink.channel1
+right_drive_wheel = plink.channel2
+```
+
+To read the encoder data, simply access the `position` and `velocity` attributes of the `MotorChannel` object:
+
+```python filename="python"
+left_position = left_drive_wheel.position
+left_velocity = left_drive_wheel.velocity
+
+channel_3_position = plink.channel3.position
+channel_3_velocity = plink.channel3.velocity
+
+print(f"Left wheel: {left_position}\t {left_velocity}")
+print(f"Channel 3: {channel_3_position}\t {channel_3_velocity}")
+```
+
+Note that the forward direction of the position is dependent on the direction that the motor is connected to the MotorGo and the direction the encoder is connected to the motor.

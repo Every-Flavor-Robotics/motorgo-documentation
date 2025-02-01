@@ -1,0 +1,30 @@
+# Reading QWIIC Sensors
+
+The QWIIC ports on the MotorGo are directly connected to the Raspberry Pi's I2C bus. This allows you to read sensor data from the QWIIC sensor directly from the Raspberry Pi, without needing to communicate with the MotorGo board.
+
+## Enable I2C on the Raspberry Pi
+
+Before you can read data from the QWIIC sensors, you need to enable I2C on the Raspberry Pi. Run the following command to open the Raspberry Pi configuration tool:
+
+```bash
+sudo raspi-config
+```
+
+Navigate to `Interfacing Options` > `I2C` and select `Yes` to enable I2C. Reboot the Raspberry Pi for the changes to take effect.
+
+## Checking for Connected QWIIC Sensors
+You can use `i2cdetect` to check for connected QWIIC sensors. To install `i2cdetect`, run the following command:
+```bash
+sudo apt update
+sudo apt install i2c-tools
+```
+
+Run the following command to check for connected QWIIC sensors:
+```bash
+i2cdetect -y 1
+```
+
+You should see a list of I2C addresses and devices connected to the I2C bus. You should see the address of the QWIIC sensor connected to the MotorGo board.
+
+## Reading Sensor Data
+To read data, install the library for the QWIIC sensor you are using. Adafruit and Sparkfun provide Python libraries for their QWIIC sensors. Follow the instructions provided by the sensor manufacturer to install the library.
