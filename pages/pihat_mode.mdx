@@ -7,20 +7,21 @@ import { Callout } from 'nextra/components'
     Applies to Plink, Axis
 </Callout>
 
-The MotorGo Plink and Core can be configured as a PiHat for use with any Raspberry Pi with a 40 pin header. In this configuration, the MotorGo Plink 1 can be controlled using the Python API.
+The MotorGo Plink and Core can be configured as a PiHat for use with any Raspberry Pi with a 40 pin header. In this configuration, the MotorGo boards can be controlled using the MotorGo Python API.
+
+If you're familiar with the setup process for a Raspberry Pi, jump to the [Quickstart Guide](/pihat_mode/quickstart) to get started. Otherwise, follow the detailed setup instructions, starting at [Raspberry Pi Setup](/pihat_mode/pi_setup).
 
 
-
-This page should serve as an introduction of sorts to this configuration. Details to include could be:
+{/* This page should serve as an introduction of sorts to this configuration. Details to include could be:
 * Features of the MotorGo Plink 1 in PiHat mode
 * Why you would want to use the MotorGo Plink 1 as a PiHat vs in standalone mode
 * Link to using ROS with Plink PiHat
 
 
-This callout might need a better home. I'm not sure where it should go, maybe this is the right page, if we add more info here
+This callout might need a better home. I'm not sure where it should go, maybe this is the right page, if we add more info here */}
 
 <Callout type="warning" emoji="⚠️">
 
-    Heatsinks on the Raspberry Pi may short connectors on the bottom of the MotorGo Plink 1. Please use longer standoffs and a header spacer to prevent this.
+    The MotorGo Python API does not currently support the Axis, meaning it can't be used in PiHat mode yet. Support is on the way!
 </Callout>
 
