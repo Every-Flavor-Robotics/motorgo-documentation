@@ -21,6 +21,14 @@ export default {
     standalone_mode: "Standalone Mode",
     pihat_mode: "PiHat Mode",
 
+
+    api_reference_separate: {
+        type: 'separator',
+        title: "Software Reference"
+    },
+
+    python_api_reference: "Python",
+
     knowledge_base_separator: {
         type: 'separator',
         title: "Knowledge Base"
@@ -30,12 +38,5 @@ export default {
     __knowledge_building_blocks: {
         display: 'hidden'
     },
-
-    api_reference_separate: {
-        type: 'separator',
-        title: "Software Reference"
-    },
-
-    python_api_reference: "Python",
 
 }
