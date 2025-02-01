@@ -2,19 +2,14 @@ import { Steps } from 'nextra/components'
 import { Cards } from 'nextra/components'
 import { Callout } from 'nextra/components'
 
-# Python API Reference
+# Python API Guide
 
-<Callout type="info" emoji="🤖">
-    Applies to Plink, Axis
-</Callout>
+This guide will walk you through using all of the features of the MotorGo Python API.
 
-The MotorGo Python API allows you to control the PiHat-compatible MotorGo boards on your Raspberry Pi. To set up your MotorGo and Raspberry Pi, follow the steps in the [quickstart guide](/pihat_mode/quickstart).
+- [Getting Started](/python_api_reference/getting_started): Import the MotorGo board, configure the power supply voltage, and connect to the board.
+- [Reading Encoder Data](/python_api_reference/encoder): Read the encoder data from the MotorGo board.
+- [Motor Control](/python_api_reference/motor_control): Control the motors on the MotorGo board.
+- [Reading IMU Data](/python_api_reference/imu): Read the IMU data from the MotorGo board.
+- [Reading QWIIC Sensors](/python_api_reference/battery): Read data from connected QWIIC sensors.
 
-To use the MotorGo Python API, first import your MotorGo board from the `motorgo` module:
-
-```python filename="python"
-from motorgo import Plink # or Axis
-from motorgo import ControlMode # Used for congfiguring the control mode for the motors
-```
-
-The `Plink` and `Axis` classes are the main interfaces for controlling the MotorGo Plink and Axis boards, respectively. Jump to the [Plink API reference](/python_api_reference/plink) or [Axis API reference](/python_api_reference/axis).
+Note: The Python API currently only supports the MotorGo Plink board. Support for the MotorGo Axis board is coming soon!
