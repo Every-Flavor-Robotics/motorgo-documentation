@@ -1,5 +1,58 @@
 import { Callout } from 'nextra/components'
+import { Table } from 'nextra/components'
 
-<Callout type="warning" emoji="⚠️">
-    This page is coming soon!
-</Callout>
+
+# Installing Board Definitions
+
+The first step to programming your MotorGo board is to install the board definitions in the Arduino IDE or PlatformIO. The MotorGo boards are released in two stages: Experimental and Production. The board definitions for Experimental boards are stored in the MotorGo Experimental Boards repository, while the production board definitions are directly available in the `esp32 by espressif systems` board definition package. The table below shows the current status of the MotorGo boards:
+
+
+
+MotorGo a two-stage release structure for MotorGo boards:
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Board Name</Table.Th>
+      <Table.Th>Development Status</Table.Th>
+      <Table.Th>Where to Install</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td>MotorGo Plink</Table.Td>
+      <Table.Td>Beta</Table.Td>
+      <Table.Td>Experimental Boards</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>MotorGo Axis</Table.Td>
+      <Table.Td>Beta</Table.Td>
+      <Table.Td>Experimental Boards</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
+
+## Installing Experimental Board Definitions
+
+To install the MotorGo Experimental Boards, you will need to add the MotorGo Experimental Boards URL to the Arduino IDE. Follow the instructions below to install the Experimental Boards:
+
+1. Open the Arduino IDE
+2. Go to `File > Preferences` or `Arduino > Preferences` on macOS
+3. In the `Additional Boards Manager URLs` field, add the following URL: `https://raw.githubusercontent.com/Every-Flavor-Robotics/motorgo-experimental-boards/refs/heads/main/package_motorgo_index.json`
+4. Click `OK` to save the preferences
+5. Go to `Tools > Board > Boards Manager...`
+6. Search for `MotorGo Experimental`
+7. Install the `MotorGo Experimental` boards
+
+## Installing Production Board Definitions
+
+To install the MotorGo Production Boards, you will need to install the `esp32 by espressif systems` board definitions. Follow the instructions below to install the Production Boards:
+
+1. Go to `Tools > Board > Boards Manager...`
+2. Search for `ESP32`
+3. Install `esp32` by Espressif Systems
+
+After installing the board definitions, you should be able to select your MotorGo from the list of available boards in the Arduino IDE.
+
+
+
+
