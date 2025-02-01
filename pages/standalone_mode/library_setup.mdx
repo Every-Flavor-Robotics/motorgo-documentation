@@ -1,5 +1,37 @@
 import { Callout } from 'nextra/components'
 
-<Callout type="warning" emoji="⚠️">
-    This page is coming soon!
-</Callout>
+# Installing the MotorGo Library
+
+The MotorGo library provides an easy API to control motors and read encoders on the MotorGo. The library is available for both the MotorGo Plink and MotorGo Axis boards. This guide will show you how to install the MotorGo library in the Arduino IDE.
+
+## MotorGo Axis (and Mini) Library Installation
+
+The MotorGo Axia and Mini can both be controlled identically with the MotorGo Mini Driver library. To install the MotorGo Mini Driver library, follow the steps below:
+
+### Install the MotorGo Mini Driver Library:
+
+
+Arduino:
+
+* Open the Arduino IDE
+* Go to `Sketch > Include Library > Manage Libraries...`
+* Search for `MotorGo_Mini_Driver` and press install
+
+
+PlatformIO:
+
+Add the following line to your `platformio.ini` file:
+
+```ini
+lib_deps =
+    https://github.com/Every-Flavor-Robotics/motorgo-mini-driver.git#main
+```
+
+### Install the MotorGo Plink Library:
+
+The MotorGo Plink can be controlled with the MotorGo Plink Driver library. Currently, the MotorGo Plink Driver library is not available in the Arduino Library Manager. We recommend using PlatformIO to install the MotorGo Plink Driver library. To install the MotorGo Plink Driver library, follow the steps below:
+
+```ini
+lib_deps =
+    https://github.com/Every-Flavor-Robotics/motorgo-plink-driver.git#dev
+```
