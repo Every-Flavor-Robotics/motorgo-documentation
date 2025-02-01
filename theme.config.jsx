@@ -26,4 +26,8 @@ export default {
     chat: {
         link: 'https://discord.gg/exDWKb4kwd',
     },
+    sidebar:
+    {
+        defaultMenuCollapseLevel: 1,
+    }
 }
